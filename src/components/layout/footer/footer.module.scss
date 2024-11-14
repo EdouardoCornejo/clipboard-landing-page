@@ -23,7 +23,7 @@
     text-align: left;
 
     a {
-      @include font-400;
+      @include regular;
       color: $font-neutral;
       font-size: 1.8rem;
       line-height: 3rem;

@@ -6,17 +6,18 @@
   box-sizing: border-box;
 }
 
-html{
+h1,
+h2,
+h3 h2 {
+  margin: 0;
+}
+
+html {
   font-size: 62.5%; /* 1REM = 10PX */
 }
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 body {

@@ -16,9 +16,22 @@
   justify-content: center;
 }
 
+@mixin block {
+  display: block;
+}
+@mixin full-width {
+  width: 100%;
+}
+
 @mixin column {
   @include flex;
   flex-direction: column;
+}
+
+@mixin container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
 }
 
 @mixin row {
@@ -47,12 +60,24 @@
   align-items: center;
 }
 
-@mixin font-400 {
+@mixin light {
+  font-weight: 100;
+}
+
+@mixin regular {
   font-weight: 400;
 }
 
-@mixin font-600 {
+@mixin medium {
+  font-weight: 500;
+}
+
+@mixin semi-bold {
   font-weight: 600;
+}
+
+@mixin bold {
+  font-weight: 700;
 }
 
 @mixin markdown {

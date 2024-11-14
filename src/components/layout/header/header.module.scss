@@ -1,0 +1,35 @@
+@import "@styles";
+
+.header {
+  @include center;
+  flex-direction: column;
+  background-image: url("../../../assets//png/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 36.3rem;
+
+  &__logo img {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 12.8rem 0 5.6rem 0;
+  }
+
+  &__content {
+    @include column;
+    text-align: center;
+    gap: 1.6rem;
+    width: 73rem;
+
+    h1 {
+      color: $font-neutral;
+      font-size: 4.6rem;
+    }
+
+    p {
+      @include regular;
+      color: $font-caption;
+      font-size: 2rem;
+    }
+  }
+}
