@@ -1,0 +1,10 @@
+@import "@styles";
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12.4rem;
+  width: 100%;
+  gap: 1.6rem;
+}
