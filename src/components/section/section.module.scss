@@ -1,0 +1,25 @@
+@import "@styles";
+
+.section {
+  @include center;
+  display: flex;
+  padding: 15rem 0 8rem 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 73rem;
+    text-align: center;
+    gap: 1.9rem;
+
+    h2 {
+      color: $font-neutral;
+      font-size: 3.6rem;
+    }
+
+    p {
+      color: $font-caption;
+      font-size: 1.8rem;
+    }
+  }
+}
