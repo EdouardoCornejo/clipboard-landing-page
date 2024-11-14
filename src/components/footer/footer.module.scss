@@ -1,0 +1,42 @@
+@import "@styles";
+
+.footer {
+  @include grid-center;
+  background-color: $footer;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem;
+  height: 15rem;
+
+  &__logo {
+    @include center;
+
+    img {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
+
+  &__links {
+    @include grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+
+    a {
+      @include font-400;
+      color: $font-neutral;
+      font-size: 1.8rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__social {
+    @include center;
+    gap: 2.4rem;
+
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

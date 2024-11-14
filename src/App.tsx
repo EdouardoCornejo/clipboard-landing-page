@@ -1,6 +1,13 @@
+import { PageLayout } from "./components"
 
 function App() {
- return <p>ClipboardLandingPage</p>
+ return (
+    <div>
+        <PageLayout >
+            <></>
+        </PageLayout>
+    </div>
+ )
 }
 
 export default App

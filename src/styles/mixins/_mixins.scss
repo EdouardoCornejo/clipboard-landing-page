@@ -1,0 +1,59 @@
+@mixin body-copy {
+  font-size: 18px;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin grid-center {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin column {
+  @include flex;
+  flex-direction: column;
+}
+
+@mixin row {
+  @include flex;
+  flex-direction: row;
+}
+
+@mixin spaceBetween {
+  @include row;
+  justify-content: space-between;
+}
+
+@mixin spaceAround {
+  @include row;
+  justify-content: space-around;
+}
+
+@mixin spaceEvenly {
+  @include row;
+  justify-content: space-evenly;
+}
+
+@mixin center {
+  @include flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font-400 {
+  font-weight: 400;
+}
+
+@mixin font-600 {
+  font-weight: 600;
+}
+
+@mixin markdown {
+}
