@@ -1,0 +1,32 @@
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 97.2rem;
+
+  &__image {
+    position: relative;
+
+    img {
+      position: absolute;
+      transform: scale(1.1);
+      top: 3%;
+      left: 4%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 11rem;
+    padding-top: 6.8rem;
+    gap: 5.6rem;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 35rem;
+    }
+  }
+}
