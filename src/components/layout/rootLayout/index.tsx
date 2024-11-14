@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { linksData, socialData } from "../../../common";
-import { Footer } from "../footer";
-import style from "./rootLayout.module.scss";
+import { FC } from 'react';
+import { linksData, socialData } from '../../../common';
+import { Footer } from '../footer';
+import style from './rootLayout.module.scss';
 
 interface PageLayoutProps {
   children: React.ReactNode;

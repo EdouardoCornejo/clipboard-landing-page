@@ -1,5 +1,5 @@
-import { FC } from "react";
-import style from "./section.module.scss";
+import { FC } from 'react';
+import style from './section.module.scss';
 
 interface SectionProps {
   title: string;

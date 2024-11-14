@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Links, Social } from "../../../common";
-import styles from "./footer.module.scss";
+import { FC } from 'react';
+import { Links, Social } from '../../../common';
+import styles from './footer.module.scss';
 
 interface FooterProps {
   links: Array<Links>;

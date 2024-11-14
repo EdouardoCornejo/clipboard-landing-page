@@ -1,5 +1,5 @@
-import { FC } from "react";
-import style from "./features.module.scss";
+import { FC } from 'react';
+import style from './features.module.scss';
 
 interface FeaturesProps {
   t?: string;
@@ -8,8 +8,8 @@ interface FeaturesProps {
 export const Features: FC<FeaturesProps> = () => {
   return (
     <section className={style.features}>
-      <div className={style.features__image} >
-        <img src='/src/assets/png/image-computer.png' alt="computer" />
+      <div className={style.features__image}>
+        <img src="/src/assets/png/image-computer.png" alt="computer" />
       </div>
       <div className={style.features__content}>
         <div className={style.features__content__info}>
