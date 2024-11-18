@@ -1,0 +1,19 @@
+@import '@styles';
+
+.devices {
+  @include flex;
+  justify-content: center;
+
+  img {
+    width: 81.2rem;
+    height: 47.5rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    img {
+      width: 100%;
+      min-width: 31.1rem;
+      height: auto;
+    }
+  }
+}
