@@ -3,6 +3,7 @@ import styles from './header.module.scss';
 export const Header = () => {
   return (
     <header className={styles.header}>
+      <div className={styles.header__background} />
       <div className={styles.header__logo}>
         <img src="/src/assets/svg/logo.svg" alt="logo" />
       </div>

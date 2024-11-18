@@ -1,11 +1,6 @@
-import { FC } from 'react';
 import style from './features.module.scss';
 
-interface FeaturesProps {
-  t?: string;
-}
-
-export const Features: FC<FeaturesProps> = () => {
+export const Features = () => {
   return (
     <section className={style.features}>
       <div className={style.features__image}>

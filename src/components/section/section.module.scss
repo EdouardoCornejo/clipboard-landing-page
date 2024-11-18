@@ -1,16 +1,20 @@
-@import "@styles";
+@import '@styles';
 
 .section {
   @include center;
   display: flex;
-  padding: 15rem 0 8rem 0;
+  margin-bottom: 8rem;
 
   &__content {
     display: flex;
     flex-direction: column;
-    width: 73rem;
     text-align: center;
     gap: 1.9rem;
+    width: 73rem;
+
+    @media screen and (max-width: $tablet) {
+      width: 31.2rem;
+    }
 
     h2 {
       color: $font-neutral;
