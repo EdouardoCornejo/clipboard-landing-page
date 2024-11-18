@@ -1,0 +1,39 @@
+@import "@styles";
+
+.button {
+  @include regular;
+  width: 22.7rem;
+  height: 100%;
+  min-height: 5.6rem;
+  max-height: 5.6rem;
+  color: $white;
+  font-size: 1.8rem;
+  border-radius: 2.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
+  &.primary {
+    background-color: $primary;
+    border-bottom: 0.6rem solid rgba(0, 0, 0, 0.15);
+
+    &:active {
+      background-color: lighten($primary, 10%);
+      transform: translateY(0.2rem);
+      box-shadow: 0rem 0.8rem 1.5rem rgba(0, 0, 0, 0.15),
+        0rem 0.4rem 1rem rgba(0, 255, 204, 0.2);
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    border-bottom: 0.6rem solid rgba(0, 0, 0, 0.15);
+
+    &:active {
+      background-color: lighten($secondary, 10%);
+      transform: translateY(0.1rem);
+      box-shadow: 0rem 0.8rem 1.5rem rgba(0, 0, 0, 0.15),
+        0rem 0.4rem 1rem rgb(97, 115, 255);
+    }
+  }
+}
