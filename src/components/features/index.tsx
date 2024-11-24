@@ -1,10 +1,11 @@
+import imageComputer from '../../assets/png/image-computer.png';
 import style from './features.module.scss';
 
 export const Features = () => {
   return (
     <section className={style.features}>
       <div className={style.features__image}>
-        <img src="/src/assets/png/image-computer.png" alt="computer" />
+        <img src={imageComputer} alt="computer" />
       </div>
       <div className={style.features__content}>
         <div className={style.features__content__info}>

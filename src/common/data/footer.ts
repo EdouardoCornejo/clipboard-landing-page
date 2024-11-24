@@ -1,3 +1,6 @@
+import iconFacebook from '../../assets/svg/icon-facebook.svg';
+import iconInstagram from '../../assets/svg/icon-instagram.svg';
+import iconTwitter from '../../assets/svg/icon-twitter.svg';
 import { Links, Social } from '../interfaces';
 
 export const linksData: Array<Links> = [
@@ -33,18 +36,18 @@ export const socialData: Array<Social> = [
     id: 1,
     name: 'facebook',
     link: 'https://www.facebook.com',
-    icon: '/src/assets/svg/icon-facebook.svg',
+    icon: iconFacebook,
   },
   {
     id: 2,
     name: 'twitter',
     link: 'https://www.twitter.com',
-    icon: '/src/assets/svg/icon-twitter.svg',
+    icon: iconTwitter,
   },
   {
     id: 3,
     name: 'instagram',
     link: 'https://www.instagram.com',
-    icon: '/src/assets/svg/icon-instagram.svg',
+    icon: iconInstagram,
   },
 ];

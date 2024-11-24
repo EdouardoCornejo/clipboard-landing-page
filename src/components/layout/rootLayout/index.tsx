@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import logo from '../../../assets/svg/logo.svg';
 import { linksData, socialData } from '../../../common';
 import { Footer } from '../footer';
 import style from './rootLayout.module.scss';
@@ -11,11 +12,7 @@ export const PageLayout: FC<PageLayoutProps> = ({ children }) => {
   return (
     <main className={style.rootLayout}>
       <div className={style.rootLayout__container}>{children}</div>
-      <Footer
-        logo="/src/assets/svg/logo.svg"
-        links={linksData}
-        social={socialData}
-      />
+      <Footer logo={logo} links={linksData} social={socialData} />
     </main>
   );
 };
