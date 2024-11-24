@@ -1,3 +1,4 @@
+import logo from '../../../assets/svg/logo.svg';
 import styles from './header.module.scss';
 
 export const Header = () => {
@@ -5,7 +6,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.header__background} />
       <div className={styles.header__logo}>
-        <img src="/src/assets/svg/logo.svg" alt="logo" />
+        <img src={logo} alt="logo" />
       </div>
       <div className={styles.header__content}>
         <h1>A history of everything you copy</h1>
