@@ -17,11 +17,6 @@ A modern and responsive landing page designed to promote **Clipboard**, a tool t
 ## ⚡ Getting Started
 
 1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/EdouardoCornejo/clipboard-landing-page.git
-   cd clipboard-landing-page
-   ```
    
 2. **Install dependencies:**
    npm install
