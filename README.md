@@ -6,11 +6,9 @@ A static single-view landing page promoting **Clipboard**, a fictional clipboard
 
 - **Live:** https://clipboard-landing-page-tau-ecru.vercel.app/
 
-| Desktop                                            | Mobile                                           |
-| -------------------------------------------------- | ------------------------------------------------ |
-| ![Desktop screenshot](docs/screenshot-desktop.png) | ![Mobile screenshot](docs/screenshot-mobile.png) |
-
-> The images are placeholders. Create a `docs/` folder and drop `screenshot-desktop.png` and `screenshot-mobile.png` in it.
+| Desktop                                            | Mobile                                                       |
+| ------------------------------------------------- | ---------------------------------------------------------- |
+| <img src="docs/screenshot-desktop.jpg" width="420" alt="Desktop screenshot" /> | <img src="docs/screenshot-mobile.jpg" width="200" alt="Mobile screenshot" /> |
 
 ## Stack
 
