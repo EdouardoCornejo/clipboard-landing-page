@@ -10,16 +10,14 @@ export const InfoSection = () => {
         <img src={iconBlacklist} alt="blacklist" />
         <h2>Create blacklists</h2>
         <p>
-          Ensure sensitive information never makes its way to your clipboard by
-          excluding certain sources.
+          Ensure sensitive information never makes its way to your clipboard by excluding certain
+          sources.
         </p>
       </div>
       <div className={styles.info__container}>
         <img src={iconText} alt="text" />
         <h2>Plain text snippets</h2>
-        <p>
-          Remove unwanted formatting from copied text for a consistent look.
-        </p>
+        <p>Remove unwanted formatting from copied text for a consistent look.</p>
       </div>
       <div className={styles.info__container}>
         <img src={iconPreview} alt="preview" />

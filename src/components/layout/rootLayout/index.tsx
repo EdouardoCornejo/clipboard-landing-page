@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import logo from '../../../assets/svg/logo.svg';
 import { linksData, socialData } from '../../../common';
 import { Footer } from '../footer';

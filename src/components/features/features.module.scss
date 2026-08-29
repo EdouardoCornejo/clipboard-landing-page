@@ -14,15 +14,14 @@
 
   &__image {
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: row-reverse;
     justify-content: end;
-    
 
     img {
       width: 100%;
-      max-width: 71.2rem; 
-      min-width: 71.2rem; 
+      max-width: 71.2rem;
+      min-width: 71.2rem;
       height: auto;
       object-fit: contain;
     }
@@ -30,7 +29,7 @@
     @media screen and (max-width: $small-desktop) {
       img {
         width: 100%;
-        min-width: 31.2rem; 
+        min-width: 31.2rem;
         margin: 0 3.2rem;
       }
     }
@@ -38,7 +37,7 @@
 
   &__content {
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: column;
     padding-left: 11rem;
     gap: 5.6rem;
@@ -46,13 +45,13 @@
     @media screen and (max-width: $small-desktop) {
       padding-left: 0;
     }
-        &__info {
-        text-align: left;
-        width: 35rem;
+    &__info {
+      text-align: left;
+      width: 35rem;
 
-        @media screen and (max-width: $small-desktop) {
-          text-align: center;
-        }
+      @media screen and (max-width: $small-desktop) {
+        text-align: center;
+      }
 
       h2 {
         color: $font-neutral;
