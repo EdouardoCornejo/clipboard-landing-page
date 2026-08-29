@@ -23,4 +23,15 @@ a {
 body {
   font-family: 'bai jamjuree', sans-serif;
   font-weight: 400;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#root {
+  width: 100%;
 }
