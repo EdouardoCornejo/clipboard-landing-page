@@ -3,17 +3,13 @@
 .devices {
   @include flex;
   justify-content: center;
+  width: 100%;
+  padding: 0 2.4rem;
 
   img {
-    width: 81.2rem;
-    height: 47.5rem;
-  }
-
-  @media screen and (max-width: $tablet) {
-    img {
-      width: 100%;
-      min-width: 31.1rem;
-      height: auto;
-    }
+    width: 100%;
+    max-width: 81.2rem;
+    height: auto;
+    object-fit: contain;
   }
 }

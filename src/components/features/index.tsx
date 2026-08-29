@@ -11,8 +11,7 @@ export const Features = () => {
         <div className={style.features__content__info}>
           <h2>Quick Search</h2>
           <p>
-            Easily search your snippets by content, category, web address,
-            application, and more.
+            Easily search your snippets by content, category, web address, application, and more.
           </p>
         </div>
         <div className={style.features__content__info}>
@@ -21,10 +20,7 @@ export const Features = () => {
         </div>
         <div className={style.features__content__info}>
           <h2>Complete History</h2>
-          <p>
-            Retrieve any snippets from the first moment you started using the
-            app.
-          </p>
+          <p>Retrieve any snippets from the first moment you started using the app.</p>
         </div>
       </div>
     </section>

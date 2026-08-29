@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { Links, Social } from '../../../common';
+import type { FC } from 'react';
+import type { Links, Social } from '../../../common';
 import styles from './footer.module.scss';
 
 interface FooterProps {

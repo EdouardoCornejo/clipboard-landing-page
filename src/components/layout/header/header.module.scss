@@ -5,6 +5,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  width: 100%;
   margin-bottom: 4.8rem;
 
   &__background {
@@ -37,9 +38,12 @@
 
   &__content {
     @include column;
+    align-items: center;
     text-align: center;
     gap: 1.6rem;
-    width: 73rem;
+    width: 100%;
+    max-width: 73rem;
+    padding: 0 2.4rem;
     z-index: 1;
 
     h1 {
@@ -54,7 +58,6 @@
     }
 
     @media screen and (max-width: $tablet) {
-      width: 31.1rem;
       h1 {
         font-size: 3.2rem;
       }

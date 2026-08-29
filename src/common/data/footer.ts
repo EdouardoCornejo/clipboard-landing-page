@@ -1,7 +1,7 @@
 import iconFacebook from '../../assets/svg/icon-facebook.svg';
 import iconInstagram from '../../assets/svg/icon-instagram.svg';
 import iconTwitter from '../../assets/svg/icon-twitter.svg';
-import { Links, Social } from '../interfaces';
+import type { Links, Social } from '../interfaces';
 
 export const linksData: Array<Links> = [
   {
