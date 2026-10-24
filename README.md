@@ -186,7 +186,9 @@ clipboard-landing-page/
 ├── .husky/pre-commit
 ├── docs/                         # Capturas del README
 ├── public/
-│   └── FEmentor.png              # Favicon
+│   ├── favicon.svg               # Favicon
+│   ├── favicon.ico               # Favicon de respaldo
+│   └── apple-touch-icon.png      # Icono de inicio en iOS
 ├── src/
 │   ├── assets/
 │   │   ├── png/                  # Fondos, imágenes y logos de clientes
