@@ -1,43 +1,68 @@
 # Clipboard Landing Page
 
-A static single-view landing page promoting **Clipboard**, a fictional clipboard-manager app. Meant as a practice project and a reference for anyone reading or extending the code.
+_Landing page_ estática y _responsive_ para **Clipboard**, una app ficticia de gestión del portapapeles, construida con **React 19 + TypeScript + Vite** y estilada con **SCSS Modules**. Es la solución al reto [Clipboard landing page de Frontend Mentor](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): sin estado, sin router y sin llamadas de red, cada bloque es un **componente puro** alimentado por _props_ o por datos tipados.
 
-## Demo
+**Demo:** [clipboard-landing-page-tau-ecru.vercel.app](https://clipboard-landing-page-tau-ecru.vercel.app)
 
-- **Live:** https://clipboard-landing-page-tau-ecru.vercel.app/
+![Tech](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
+![Tech](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
+![Tech](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tech](https://img.shields.io/badge/SCSS-Modules-CC6699?logo=sass&logoColor=white)
+![Tech](https://img.shields.io/badge/ESLint-10-4B32C3?logo=eslint&logoColor=white)
+![Tech](https://img.shields.io/badge/Prettier-3-F7B93E?logo=prettier&logoColor=black)
 
-| Desktop                                            | Mobile                                                       |
-| ------------------------------------------------- | ---------------------------------------------------------- |
-| <img src="docs/screenshot-desktop.jpg" width="420" alt="Desktop screenshot" /> | <img src="docs/screenshot-mobile.jpg" width="200" alt="Mobile screenshot" /> |
+| Escritorio                                                                       | Móvil                                                                       |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| <img src="docs/screenshot-desktop.jpg" width="420" alt="Captura de escritorio" /> | <img src="docs/screenshot-mobile.jpg" width="200" alt="Captura de móvil" /> |
 
-## Stack
+---
 
-![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
-![SCSS Modules](https://img.shields.io/badge/SCSS-Modules-CC6699?logo=sass&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-10-4B32C3?logo=eslint&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-3-F7B93E?logo=prettier&logoColor=black)
+## Tabla de contenidos
 
-## Features
+- [Clipboard Landing Page](#clipboard-landing-page)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+  - [Qué hace el proyecto](#qué-hace-el-proyecto)
+  - [Cómo ejecutar el proyecto](#cómo-ejecutar-el-proyecto)
+    - [Requisitos](#requisitos)
+    - [Instalación](#instalación)
+    - [Scripts](#scripts)
+  - [Cómo funciona](#cómo-funciona)
+    - [1. `src/App.tsx`](#1-srcapptsx)
+    - [2. Componentes (`src/components`)](#2-componentes-srccomponents)
+    - [3. Datos tipados (`src/common`)](#3-datos-tipados-srccommon)
+    - [4. Estilos (`src/styles`)](#4-estilos-srcstyles)
+    - [Flujo de renderizado](#flujo-de-renderizado)
+  - [Cómo extenderlo](#cómo-extenderlo)
+  - [Calidad y CI](#calidad-y-ci)
+  - [Tecnologías](#tecnologías)
+  - [Estructura del proyecto](#estructura-del-proyecto)
+  - [Personalización](#personalización)
+  - [Licencia](#licencia)
 
-- Whole page composed in a single component tree in [src/App.tsx](src/App.tsx): header, download buttons, text sections, features, devices, info block and logos.
-- Reusable `Section` component driven by `title` and `content` props ([src/components/section/index.tsx](src/components/section/index.tsx)); used 4 times in `App.tsx`.
-- `Button` component with `primary` / `secondary` variants that also forwards native `<button>` props ([src/components/form/button/index.tsx](src/components/form/button/index.tsx)).
-- Footer links and social icons defined as data, not JSX, in [src/common/data/footer.ts](src/common/data/footer.ts) and typed with `Links` and `Social` ([src/common/interfaces/footer.ts](src/common/interfaces/footer.ts)).
-- Styling via per-component SCSS CSS Modules (10 `*.module.scss` files) plus a global token layer (colors, breakpoints, mixins) reachable through the `@styles` alias ([vite.config.ts](vite.config.ts), [tsconfig.app.json](tsconfig.app.json)).
-- No client state, no router, no network calls: every component is a pure function of its props.
-- Strict TypeScript with `noUnusedLocals` and `noUnusedParameters` ([tsconfig.app.json](tsconfig.app.json)).
-- Automated quality: ESLint flat config with type-checked rules, Prettier, a pre-commit hook and GitHub Actions CI.
+---
 
-## Prerequisites
+## Qué hace el proyecto
 
-| Tool    | Version              | Source                                                                                         |
-| ------- | -------------------- | ---------------------------------------------------------------------------------------------- |
-| Node.js | `>= 22` (CI uses 24) | [package.json](package.json) → `engines`, [.github/workflows/ci.yml](.github/workflows/ci.yml) |
-| Yarn    | 1.x (Classic)        | [yarn.lock](yarn.lock) (`lockfile v1`)                                                         |
+- **Página completa en un único árbol de componentes**: cabecera, botones de descarga, secciones de texto, características, dispositivos, bloque informativo, logos de clientes y footer.
+- **Componente `Section` reutilizable** (`title` + `content`), usado cuatro veces.
+- **`Button` con variantes** `primary` / `secondary` que reenvía las _props_ nativas de `<button>`.
+- **Footer dirigido por datos**: enlaces y redes sociales definidos como arrays tipados, no como JSX.
+- **Diseño _responsive_** con _breakpoints_ SCSS (`$phone`, `$tablet`, `$small-desktop`…) y fondos de cabecera distintos para escritorio y móvil.
+- **SCSS Modules por componente** más una capa global de colores, _breakpoints_ y _mixins_ accesible con el alias `@styles`.
+- **TypeScript estricto** (`noUnusedLocals`, `noUnusedParameters`).
 
-## Quick start
+---
+
+## Cómo ejecutar el proyecto
+
+### Requisitos
+
+| Herramienta | Versión                     |
+| ----------- | --------------------------- |
+| Node.js     | `>= 22` (la CI usa Node 24) |
+| Yarn        | 1.x (Classic, `yarn.lock` v1) |
+
+### Instalación
 
 ```bash
 git clone git@github.com:EdouardoCornejo/clipboard-landing-page.git
@@ -46,70 +71,165 @@ yarn install
 yarn dev
 ```
 
-Vite serves the app at `http://localhost:5173`.
+Vite sirve la app en `http://localhost:5173`.
 
-## Available scripts
+### Scripts
 
-Defined in [package.json](package.json).
+| Comando             | Comando real                                                   | Qué hace                                                        |
+| ------------------- | -------------------------------------------------------------- | --------------------------------------------------------------- |
+| `yarn dev`          | `vite`                                                         | Servidor de desarrollo con HMR.                                 |
+| `yarn build`        | `tsc -b && vite build`                                         | Comprueba tipos y genera el build de producción en `dist/`.     |
+| `yarn preview`      | `vite preview`                                                 | Sirve localmente el `dist/` ya generado.                        |
+| `yarn lint`         | `eslint . --report-unused-disable-directives --max-warnings 0` | Lint de todo el repo; falla con cualquier warning.              |
+| `yarn format:fix`   | `prettier --write .`                                           | Formatea todos los archivos.                                    |
+| `yarn format:check` | `prettier --check .`                                           | Comprueba el formato sin escribir (lo usa la CI).               |
+| `yarn prepare`      | `husky`                                                        | Instala los Git hooks; se ejecuta solo tras `yarn install`.     |
 
-| Script              | Actual command                                                 | What it does                                                              |
-| ------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `yarn dev`          | `vite`                                                         | Development server with HMR.                                              |
-| `yarn build`        | `tsc -b && vite build`                                         | Type-checks with TypeScript and produces the production build in `dist/`. |
-| `yarn preview`      | `vite preview`                                                 | Serves the already-built `dist/` output locally.                          |
-| `yarn lint`         | `eslint . --report-unused-disable-directives --max-warnings 0` | Lints the whole repo; fails on any warning or unused `eslint-disable`.    |
-| `yarn format:fix`   | `prettier --write .`                                           | Formats every file in the repo.                                           |
-| `yarn format:check` | `prettier --check .`                                           | Checks formatting without writing. Used by CI.                            |
-| `yarn prepare`      | `husky`                                                        | Installs the Git hooks. Runs automatically after `yarn install`.          |
+---
 
-## Architecture
+## Cómo funciona
 
-Static single-page app with no state. [src/main.tsx](src/main.tsx) mounts `<App />` in `<StrictMode>`, and [src/App.tsx](src/App.tsx) builds the whole page by arranging presentational components inside `PageLayout`. Text is passed as props (`Section`, `Button`); the only variable data — footer links and socials — lives as arrays in [src/common/data/footer.ts](src/common/data/footer.ts). Each component is a folder with an `index.tsx` and its `*.module.scss` next to it, all re-exported from [src/components/index.ts](src/components/index.ts). Global styles (reset, fonts, colors, breakpoints, mixins) load via `@import '@styles'`, an alias resolving to [src/styles/index.scss](src/styles/index.scss).
+### 1. `src/App.tsx`
 
-## Extending
+`main.tsx` monta `<App />` en `<StrictMode>`, y `App` compone la página entera colocando los bloques dentro de `PageLayout`. Los textos llegan como _props_ (`Section`, `Button`).
 
-### Add a new visual block to the page
+### 2. Componentes (`src/components`)
 
-Touches 4 places (5 if it uses images):
+Cada componente es una carpeta con su `index.tsx` y su `*.module.scss`, re-exportados desde `src/components/index.ts`:
 
-1. Create `src/components/myBlock/index.tsx` with `export const MyBlock = () => { ... }`.
-2. Create `src/components/myBlock/my-block.module.scss`, starting it with `@import '@styles';` if you need the tokens.
-3. Add `export * from './myBlock';` to [src/components/index.ts](src/components/index.ts).
-4. Import `MyBlock` and place it where it belongs in [src/App.tsx](src/App.tsx).
-5. If it has images, put them in [src/assets/](src/assets/) and import them from the block's `index.tsx` (see [src/components/features/index.tsx](src/components/features/index.tsx)).
+- **`layout/rootLayout` (`PageLayout`)** — contenedor `<main>` que envuelve el contenido y añade el `Footer` con `linksData` y `socialData`.
+- **`layout/header` (`Header`)** — logo, titular y fondo decorativo.
+- **`layout/footer` (`Footer`)** — recorre los arrays de enlaces y redes sociales recibidos por _props_.
+- **`downloadButtons` (`DownloadBtn`)** — "Download for iOS" (`primary`) y "Download for Mac" (`secondary`).
+- **`form/button` (`Button`)** — botón con variante de color.
+- **`section` (`Section`)** — título + párrafo.
+- **`features` (`Features`)** — imagen de ordenador con Quick Search, iCloud Sync y Complete History.
+- **`devices` (`Devices`)** — imagen de dispositivos.
+- **`infoSection` (`InfoSection`)** — Create blacklists, Plain text snippets y Sneak preview.
+- **`logos` (`Logos`)** — logos de Google, IBM, Microsoft, HP y Vector Graphics.
 
-### Add a text section
+### 3. Datos tipados (`src/common`)
 
-Reuse `Section`; touches 1 place:
+`common/data/footer.ts` define `linksData` y `socialData`, tipados con las interfaces `Links` y `Social` de `common/interfaces/footer.ts`.
 
-```tsx
-// src/App.tsx
-<Section title="Your title" content="Your text." />
+### 4. Estilos (`src/styles`)
+
+`index.scss` agrupa `colors`, `mixins`, `variables` (_breakpoints_) y `global` (reset y fuentes de Google Fonts). Los módulos los importan con `@import '@styles';`, alias definido en `vite.config.ts`.
+
+### Flujo de renderizado
+
+```
+main.tsx
+  └─ <App />
+       └─ PageLayout
+            ├─ Header
+            ├─ DownloadBtn ── Button (primary) + Button (secondary)
+            ├─ Section ("Keep track of your snippets")
+            ├─ Features
+            ├─ Section ("Access Clipboard Anywhere")
+            ├─ Devices
+            ├─ Section ("Supercharge your workflow")
+            ├─ InfoSection
+            ├─ Logos
+            ├─ Section ("Clipboard for iOS and Mac OS")
+            ├─ DownloadBtn
+            └─ Footer ← linksData + socialData
 ```
 
-### Add a footer link or social icon
+---
 
-Touches 1 place (2 for a new social with an icon):
+## Cómo extenderlo
 
-1. Add an object to `linksData` or `socialData` in [src/common/data/footer.ts](src/common/data/footer.ts), with a unique `id`.
-2. For a social icon, save the SVG in [src/assets/svg/](src/assets/svg/) and import it as the `icon` value.
+**Añadir un bloque visual nuevo** (4 sitios, 5 si lleva imágenes):
 
-The footer maps over those arrays and renders the items on its own ([src/components/layout/footer/index.tsx](src/components/layout/footer/index.tsx)).
+1. Crea `src/components/myBlock/index.tsx` con `export const MyBlock = () => { ... }`.
+2. Crea `src/components/myBlock/my-block.module.scss`, empezando con `@import '@styles';` si necesitas los _tokens_.
+3. Añade `export * from './myBlock';` a `src/components/index.ts`.
+4. Importa `MyBlock` y colócalo en `src/App.tsx`.
+5. Si tiene imágenes, guárdalas en `src/assets/` e impórtalas desde su `index.tsx`.
 
-## Quality
+**Añadir una sección de texto**: reutiliza `Section` en `App.tsx`:
 
-- **Lint:** `yarn lint`. Flat config in [eslint.config.js](eslint.config.js): `@eslint/js` recommended, `typescript-eslint` type-checked, React Hooks and React Refresh rules, `enum` and `namespace` banned, separate type imports, zero warnings allowed.
-- **Formatting:** Prettier with [.prettierrc.json](.prettierrc.json) (`printWidth: 100`, single quotes, `trailingComma: all`). Use `yarn format:fix` to write and `yarn format:check` to verify.
-- **Pre-commit:** [.husky/pre-commit](.husky/pre-commit) runs `lint-staged` (ESLint `--fix` + Prettier on staged files) and then `yarn build`. The `lint-staged` config is in [package.json](package.json).
-- **CI:** [.github/workflows/ci.yml](.github/workflows/ci.yml) runs on every push and pull request to `main` on Node 24, in the sequence `format:check` → `lint` → `build`. It only verifies; it never deploys.
-- **Deploy:** [vercel.json](vercel.json) disables Git auto-deploy (`deploymentEnabled: false`); deployment to Vercel is triggered manually.
+```tsx
+<Section title="Tu título" content="Tu texto." />
+```
 
-## Contributing
+**Añadir un enlace o red social al footer**: agrega un objeto con `id` único a `linksData` o `socialData` en `src/common/data/footer.ts`; para una red social, guarda el SVG en `src/assets/svg/` e impórtalo como `icon`.
 
-1. Branch off `main`.
-2. Make commits that pass the pre-commit hook (lint, formatting and build all green).
-3. Open a pull request against `main` and wait for CI to pass.
+---
 
-## License
+## Calidad y CI
 
-No explicit license. Personal practice project based on the [Frontend Mentor Clipboard landing page challenge](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9); the design and assets belong to Frontend Mentor. All rights reserved unless stated otherwise.
+- **Lint** — `eslint.config.js` (flat config): `@eslint/js` recomendado, `typescript-eslint` con reglas _type-checked_, React Hooks y React Refresh, `enum` y `namespace` prohibidos, imports de tipos separados y 0 warnings.
+- **Formato** — Prettier (`.prettierrc.json`: `printWidth: 100`, comillas simples, `trailingComma: all`).
+- **Pre-commit** — `.husky/pre-commit` ejecuta `lint-staged` (ESLint `--fix` + Prettier sobre los archivos en _stage_) y luego `yarn build`.
+- **CI** — `.github/workflows/ci.yml` corre en cada push y PR a `main` con Node 24: `format:check` → `lint` → `build`. Solo verifica, no despliega.
+- **Deploy** — `vercel.json` desactiva el auto-deploy desde Git (`deploymentEnabled: false`); el despliegue en Vercel es manual.
+
+---
+
+## Tecnologías
+
+- **React 19** + **TypeScript 5.9**
+- **Vite 7** — desarrollo, build y alias `@styles`.
+- **Sass (`sass-embedded`)** — SCSS Modules por componente.
+- **Google Fonts** — Bai Jamjuree.
+- **ESLint 10**, **Prettier 3**, **Husky**, **lint-staged** — calidad de código.
+
+---
+
+## Estructura del proyecto
+
+```
+clipboard-landing-page/
+├── .github/workflows/ci.yml
+├── .husky/pre-commit
+├── docs/                         # Capturas del README
+├── public/
+│   └── FEmentor.png              # Favicon
+├── src/
+│   ├── assets/
+│   │   ├── png/                  # Fondos, imágenes y logos de clientes
+│   │   └── svg/                  # Logo e iconos
+│   ├── common/
+│   │   ├── data/footer.ts        # linksData, socialData
+│   │   └── interfaces/footer.ts  # Links, Social
+│   ├── components/
+│   │   ├── devices/
+│   │   ├── downloadButtons/
+│   │   ├── features/
+│   │   ├── form/button/
+│   │   ├── infoSection/
+│   │   ├── layout/               # footer, header, rootLayout
+│   │   ├── logos/
+│   │   ├── section/
+│   │   └── index.ts
+│   ├── styles/                   # colors, global, mixins, variables + index.scss
+│   ├── App.tsx
+│   ├── index.css
+│   ├── normalize.css
+│   └── main.tsx
+├── eslint.config.js
+├── index.html
+├── vercel.json
+├── vite.config.ts
+└── package.json
+```
+
+---
+
+## Personalización
+
+| Qué                     | Dónde                                       | Valor por defecto                                  |
+| ----------------------- | ------------------------------------------- | -------------------------------------------------- |
+| Color primario          | `$primary` en `styles/colors/_colors.scss`   | `#26bba4`                                          |
+| Color secundario        | `$secondary`                                | `hsl(233, 100%, 69%)`                              |
+| _Breakpoints_           | `styles/variables/_variables.scss`          | `576px`, `768px`, `900px`, `1150px`, `1600px`      |
+| Enlaces del footer      | `linksData` en `common/data/footer.ts`      | FAQs, Privacy Policy, Install Guide, Contact Us, Press Kit |
+| Redes sociales          | `socialData`                                | Facebook, Twitter, Instagram                       |
+
+---
+
+## Licencia
+
+Sin licencia explícita. Proyecto personal de práctica basado en el [reto Clipboard landing page de Frontend Mentor](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9); el diseño y los recursos gráficos pertenecen a Frontend Mentor.
