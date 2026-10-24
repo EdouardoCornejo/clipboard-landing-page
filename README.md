@@ -11,8 +11,8 @@ _Landing page_ estática y _responsive_ para **Clipboard**, una app ficticia de 
 ![Tech](https://img.shields.io/badge/ESLint-10-4B32C3?logo=eslint&logoColor=white)
 ![Tech](https://img.shields.io/badge/Prettier-3-F7B93E?logo=prettier&logoColor=black)
 
-| Escritorio                                                                       | Móvil                                                                       |
-| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Escritorio                                                                        | Móvil                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | <img src="docs/screenshot-desktop.jpg" width="420" alt="Captura de escritorio" /> | <img src="docs/screenshot-mobile.jpg" width="200" alt="Captura de móvil" /> |
 
 ---
@@ -57,9 +57,9 @@ _Landing page_ estática y _responsive_ para **Clipboard**, una app ficticia de 
 
 ### Requisitos
 
-| Herramienta | Versión                     |
-| ----------- | --------------------------- |
-| Node.js     | `>= 22` (la CI usa Node 24) |
+| Herramienta | Versión                       |
+| ----------- | ----------------------------- |
+| Node.js     | `>= 22` (la CI usa Node 24)   |
 | Yarn        | 1.x (Classic, `yarn.lock` v1) |
 
 ### Instalación
@@ -75,15 +75,15 @@ Vite sirve la app en `http://localhost:5173`.
 
 ### Scripts
 
-| Comando             | Comando real                                                   | Qué hace                                                        |
-| ------------------- | -------------------------------------------------------------- | --------------------------------------------------------------- |
-| `yarn dev`          | `vite`                                                         | Servidor de desarrollo con HMR.                                 |
-| `yarn build`        | `tsc -b && vite build`                                         | Comprueba tipos y genera el build de producción en `dist/`.     |
-| `yarn preview`      | `vite preview`                                                 | Sirve localmente el `dist/` ya generado.                        |
-| `yarn lint`         | `eslint . --report-unused-disable-directives --max-warnings 0` | Lint de todo el repo; falla con cualquier warning.              |
-| `yarn format:fix`   | `prettier --write .`                                           | Formatea todos los archivos.                                    |
-| `yarn format:check` | `prettier --check .`                                           | Comprueba el formato sin escribir (lo usa la CI).               |
-| `yarn prepare`      | `husky`                                                        | Instala los Git hooks; se ejecuta solo tras `yarn install`.     |
+| Comando             | Comando real                                                   | Qué hace                                                    |
+| ------------------- | -------------------------------------------------------------- | ----------------------------------------------------------- |
+| `yarn dev`          | `vite`                                                         | Servidor de desarrollo con HMR.                             |
+| `yarn build`        | `tsc -b && vite build`                                         | Comprueba tipos y genera el build de producción en `dist/`. |
+| `yarn preview`      | `vite preview`                                                 | Sirve localmente el `dist/` ya generado.                    |
+| `yarn lint`         | `eslint . --report-unused-disable-directives --max-warnings 0` | Lint de todo el repo; falla con cualquier warning.          |
+| `yarn format:fix`   | `prettier --write .`                                           | Formatea todos los archivos.                                |
+| `yarn format:check` | `prettier --check .`                                           | Comprueba el formato sin escribir (lo usa la CI).           |
+| `yarn prepare`      | `husky`                                                        | Instala los Git hooks; se ejecuta solo tras `yarn install`. |
 
 ---
 
@@ -220,13 +220,13 @@ clipboard-landing-page/
 
 ## Personalización
 
-| Qué                     | Dónde                                       | Valor por defecto                                  |
-| ----------------------- | ------------------------------------------- | -------------------------------------------------- |
-| Color primario          | `$primary` en `styles/colors/_colors.scss`   | `#26bba4`                                          |
-| Color secundario        | `$secondary`                                | `hsl(233, 100%, 69%)`                              |
-| _Breakpoints_           | `styles/variables/_variables.scss`          | `576px`, `768px`, `900px`, `1150px`, `1600px`      |
-| Enlaces del footer      | `linksData` en `common/data/footer.ts`      | FAQs, Privacy Policy, Install Guide, Contact Us, Press Kit |
-| Redes sociales          | `socialData`                                | Facebook, Twitter, Instagram                       |
+| Qué                | Dónde                                      | Valor por defecto                                          |
+| ------------------ | ------------------------------------------ | ---------------------------------------------------------- |
+| Color primario     | `$primary` en `styles/colors/_colors.scss` | `#26bba4`                                                  |
+| Color secundario   | `$secondary`                               | `hsl(233, 100%, 69%)`                                      |
+| _Breakpoints_      | `styles/variables/_variables.scss`         | `576px`, `768px`, `900px`, `1150px`, `1600px`              |
+| Enlaces del footer | `linksData` en `common/data/footer.ts`     | FAQs, Privacy Policy, Install Guide, Contact Us, Press Kit |
+| Redes sociales     | `socialData`                               | Facebook, Twitter, Instagram                               |
 
 ---
 
